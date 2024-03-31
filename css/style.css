@@ -17,6 +17,8 @@ a{
 
 img{
     max-width: 100%;
+    display: block;
+    border-radius: 5px;
 }
 
 /*GRID GERAL*/
@@ -65,24 +67,83 @@ img{
     margin-left: 30px;
 }
 
-
-
 .logo{
     max-width: 200px;
 }
 
+/*SIDENAV*/
+
 .sidenav{
     grid-area: sidenav;
+    background: #FAFBFC;
+    padding: 30px;
 }
+
+.sidenav li a{
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    transition: .1s ease-out;
+}
+
+.sidenav li a:hover{
+    background: #B07DFB;
+}
+
+/*CONTENT*/
 
 .content{
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
+
+.col-wide{
+    grid-column: 1 / -1;
+}
+
+.imagem-1{
+    grid-row: span 2;
+    align-self: end;
+}
+
+.imagem-2{
+    align-self: end;
+}
+
+
+
+
+
+/*ANÚNCIOS*/
 
 .anuncios{
     grid-area: anuncios;
+    background: #FAFBFC;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    gap: 30px;
 }
+
+/*FOOTER*/
 
 .footer{
     grid-area: footer;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
